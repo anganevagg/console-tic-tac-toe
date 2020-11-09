@@ -1,7 +1,11 @@
 $tablero=[["-","-","-"],["-","-","-"],["-","-","-"]]
 
 def comprobar_posicion(x,y)
-
+	if $tablero[x][y]!="-"
+		puts "casilla ocupada"
+		return false
+	end
+	return true
 end
 
 def comprobar_tablero
@@ -76,6 +80,14 @@ def ingresar(valor)
 	print "Ingresa la posicion en y: "
 	y=validar
 	y-=1
+	until comprobar_posicion(x,y)
+		print "Ingresa la posicion en x: "
+		x=validar
+		x-=1
+		print "Ingresa la posicion en y: "
+		y=validar
+		y-=1
+	end
 	$tablero[x][y]=valor
 end
 
