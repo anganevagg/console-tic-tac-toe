@@ -26,7 +26,20 @@ def comprobar_tablero
 				return true
 			end
 		end
-
+		for i in (0...3)
+			for j in (0...3)
+				if $tablero[j][i]==sim
+					flag=true
+				else
+					flag=false
+					break
+				end
+			end
+			if flag
+				puts "Ganador #{sim}"
+				return true
+			end
+		end
 		for i in (0...3)
 			if $tablero[i][i]==sim
 				flag=true
