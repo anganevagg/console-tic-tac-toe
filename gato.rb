@@ -8,52 +8,6 @@ def comprobar_posicion(x,y)
 	return true
 end
 
-# def comprobar_tablero2
-# 	chars=["X","O"]
-# 	chars.each do |sim|
-# 		flag1=true
-# 		flag2=true
-# 		for i in (0...3)
-# 			for j in(0...3)
-# 				if $tablero[i][j]==sim
-# 					flag1=true
-# 				else
-# 					flag1=false
-# 					break
-# 				end
-# 				if $tablero[j][i]==sim
-# 					flag2=true
-# 				else
-# 					flag2=false
-# 					break
-# 				end
-# 			end
-# 			if flag1 or flag2
-# 				puts "Ganador #{sim}"
-# 				return true
-# 			end
-# 		end
-# 		for i in range(0...3)
-# 			if $tablero[i][i]==sim
-# 				flag1=true
-# 			else
-# 				flag1=false
-# 				break
-# 			end
-# 			if $tablero[i][2-i]==sim
-# 				flag2=true
-# 			else
-# 				flag2=false
-# 				break
-# 			end
-# 		end
-# 		if flag1 or flag2
-# 			puts "Ganador #{sim}"
-# 			return true
-# 		end
-# 	end
-# 	return false
-# end
 def comprobar_tablero
 	chars=["X", "O"]
 	chars.each do |sim|
